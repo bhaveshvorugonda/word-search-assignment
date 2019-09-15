@@ -1,0 +1,357 @@
+>>> import pandas
+>>> import os
+>>> os.getcwd()
+'/home/bhavesh/Desktop'
+>>> pandas.read_table(os.getcwd() + "/" + "word_search.tsv")
+            the  23135851162
+0            of  13151942776
+1           and  12997637966
+2            to  12136980858
+3             a   9081174698
+4            in   8469404971
+5           for   5933321709
+6            is   4705743816
+7            on   3750423199
+8          that   3400031103
+9            by   3350048871
+10         this   3228469771
+11         with   3183110675
+12            i   3086225277
+13          you   2996181025
+14           it   2813163874
+15          not   2633487141
+16           or   2590739907
+17           be   2398724162
+18          are   2393614870
+19         from   2275595356
+20           at   2272272772
+21           as   2247431740
+22         your   2062066547
+23          all   2022459848
+24         have   1564202750
+25          new   1551258643
+26         more   1544771673
+27           an   1518266684
+28          was   1483428678
+29           we   1390661912
+...         ...          ...
+333302   gopeel        12711
+333303    gopag        12711
+333304   gooyol        12711
+333305   gooyal        12711
+333306    goovo        12711
+333307    goova        12711
+333308  goottal        12711
+333309   goopal        12711
+333310   goools        12711
+333311   goooka        12711
+333312  goooglo        12711
+333313  gooogla        12711
+333314   gooogd        12711
+333315   gooofa        12711
+333316   goooao        12711
+333317   goollo        12711
+333318   goolld        12711
+333319    goolh        12711
+333320  goolgee        12711
+333321  googook        12711
+333322  googllr        12711
+333323  googlal        12711
+333324  googgoo        12711
+333325  googgol        12711
+333326   goofel        12711
+333327    gooek        12711
+333328   gooddg        12711
+333329  gooblle        12711
+333330   gollgo        12711
+333331    golgw        12711
+
+[333332 rows x 2 columns]
+>>> bh = pandas.read_table(os.getcwd() + "/" + "word_search.tsv")
+>>> bh
+            the  23135851162
+0            of  13151942776
+1           and  12997637966
+2            to  12136980858
+3             a   9081174698
+4            in   8469404971
+5           for   5933321709
+6            is   4705743816
+7            on   3750423199
+8          that   3400031103
+9            by   3350048871
+10         this   3228469771
+11         with   3183110675
+12            i   3086225277
+13          you   2996181025
+14           it   2813163874
+15          not   2633487141
+16           or   2590739907
+17           be   2398724162
+18          are   2393614870
+19         from   2275595356
+20           at   2272272772
+21           as   2247431740
+22         your   2062066547
+23          all   2022459848
+24         have   1564202750
+25          new   1551258643
+26         more   1544771673
+27           an   1518266684
+28          was   1483428678
+29           we   1390661912
+...         ...          ...
+333302   gopeel        12711
+333303    gopag        12711
+333304   gooyol        12711
+333305   gooyal        12711
+333306    goovo        12711
+333307    goova        12711
+333308  goottal        12711
+333309   goopal        12711
+333310   goools        12711
+333311   goooka        12711
+333312  goooglo        12711
+333313  gooogla        12711
+333314   gooogd        12711
+333315   gooofa        12711
+333316   goooao        12711
+333317   goollo        12711
+333318   goolld        12711
+333319    goolh        12711
+333320  goolgee        12711
+333321  googook        12711
+333322  googllr        12711
+333323  googlal        12711
+333324  googgoo        12711
+333325  googgol        12711
+333326   goofel        12711
+333327    gooek        12711
+333328   gooddg        12711
+333329  gooblle        12711
+333330   gollgo        12711
+333331    golgw        12711
+
+>>> bh = pandas.read_table(os.getcwd() + "/" + "word_search.tsv", names=["word", "occurance"])
+>>> bh
+           word    occurance
+0           the  23135851162
+1            of  13151942776
+2           and  12997637966
+3            to  12136980858
+4             a   9081174698
+5            in   8469404971
+6           for   5933321709
+7            is   4705743816
+8            on   3750423199
+9          that   3400031103
+10           by   3350048871
+11         this   3228469771
+12         with   3183110675
+13            i   3086225277
+14          you   2996181025
+15           it   2813163874
+16          not   2633487141
+17           or   2590739907
+18           be   2398724162
+19          are   2393614870
+20         from   2275595356
+21           at   2272272772
+22           as   2247431740
+23         your   2062066547
+24          all   2022459848
+25         have   1564202750
+26          new   1551258643
+27         more   1544771673
+28           an   1518266684
+29          was   1483428678
+...         ...          ...
+333303   gopeel        12711
+333304    gopag        12711
+333305   gooyol        12711
+333306   gooyal        12711
+333307    goovo        12711
+333308    goova        12711
+333309  goottal        12711
+333310   goopal        12711
+333311   goools        12711
+333312   goooka        12711
+333313  goooglo        12711
+333314  gooogla        12711
+333315   gooogd        12711
+333316   gooofa        12711
+333317   goooao        12711
+333318   goollo        12711
+333319   goolld        12711
+333320    goolh        12711
+333321  goolgee        12711
+333322  googook        12711
+333323  googllr        12711
+333324  googlal        12711
+333325  googgoo        12711
+333326  googgol        12711
+333327   goofel        12711
+333328    gooek        12711
+333329   gooddg        12711
+333330  gooblle        12711
+333331   gollgo        12711
+333332    golgw        12711
+
+[333333 rows x 2 columns]
+
+>>> bh['word'].str.startswith("ka", na=False)
+0         False
+1         False
+2         False
+3         False
+4         False
+5         False
+6         False
+7         False
+8         False
+9         False
+10        False
+11        False
+12        False
+13        False
+14        False
+15        False
+16        False
+17        False
+18        False
+19        False
+20        False
+21        False
+22        False
+23        False
+24        False
+25        False
+26        False
+27        False
+28        False
+29        False
+          ...  
+333303    False
+333304    False
+333305    False
+333306    False
+333307    False
+333308    False
+333309    False
+333310    False
+333311    False
+333312    False
+333313    False
+333314    False
+333315    False
+333316    False
+333317    False
+333318    False
+333319    False
+333320    False
+333321    False
+333322    False
+333323    False
+333324    False
+333325    False
+333326    False
+333327    False
+333328    False
+333329    False
+333330    False
+333331    False
+333332    False
+Name: word, Length: 333333, dtype: bool
+>>> bh[bh['word'].str.startswith("aa", na=False)]
+             word  occurance
+2601           aa   30523331
+5500        aaron   11698784
+6063          aaa   10243983
+12985     aaliyah    3330218
+15352         aac    2501919
+20055        aaaa    1595769
+20541         aan    1528815
+20745        aarp    1502235
+22380         aas    1317123
+25495         aap    1056489
+31069      aachen     751750
+34073         aat     643308
+34518    aardvark     629356
+34520         aar     629316
+35642      aarhus     596188
+40858         aag     470887
+43642         aaj     419650
+43936        aaas     415131
+44385     aalborg     407940
+45080         aau     397385
+45885         aad     385538
+49413         aah     339838
+50020         aab     333019
+50252      aashto     330271
+51396         aaf     317657
+51989         aal     311213
+55292         aai     280354
+57803         aam     259590
+58199        aaai     256233
+60614      aarons     238761
+...           ...        ...
+297907      aaman      15377
+298732       aacd      15304
+300159      aanet      15165
+302099       aabd      14985
+302367       aanp      14960
+304174       aaib      14800
+304478       aahp      14773
+304889    aardasp      14735
+305334      aapbl      14696
+307305   aabenraa      14532
+307408   aanestad      14523
+312314       aaag      14111
+312342       aacm      14109
+316081     aagpbl      13813
+316137      aascu      13809
+317338   aandacht      13713
+318696   aanderaa      13610
+318929       aasi      13591
+320742      aathi      13460
+322036       aarn      13362
+322581       aagr      13323
+324207      aalim      13211
+324465   aankomst      13192
+324607   aachener      13182
+326328       aale      13065
+326674  aanbieden      13045
+330001       aats      12834
+330570      aaaol      12802
+331487       aaim      12754
+331627  aaronsweb      12748
+
+[289 rows x 2 columns]
+>>> bh[bh['word'].str.startswith("aa", na=False)].head(25)
+           word  occurance
+2601         aa   30523331
+5500      aaron   11698784
+6063        aaa   10243983
+12985   aaliyah    3330218
+15352       aac    2501919
+20055      aaaa    1595769
+20541       aan    1528815
+20745      aarp    1502235
+22380       aas    1317123
+25495       aap    1056489
+31069    aachen     751750
+34073       aat     643308
+34518  aardvark     629356
+34520       aar     629316
+35642    aarhus     596188
+40858       aag     470887
+43642       aaj     419650
+43936      aaas     415131
+44385   aalborg     407940
+45080       aau     397385
+45885       aad     385538
+49413       aah     339838
+50020       aab     333019
+50252    aashto     330271
+51396       aaf     317657
+
